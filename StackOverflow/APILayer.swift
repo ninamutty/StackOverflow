@@ -10,38 +10,49 @@ import Foundation
 
 internal class APILayer {
     let baseURL: String
-    let questionData: [Question]?
+    internal var questionData: [Question]?
+    internal var jsonResponse: [String: Any]?
     
     init(baseURL: String = "https://api.stackexchange.com/2.2/questions") {
         self.baseURL = baseURL
     }
-    
-    internal var jsonResponse: [String: Any]?
     
     internal func fetchQuestions() {
         let url = URL(string: "\(self.baseURL)?pagesize=50&order=desc&sort=activity&tagged=Objective-C&site=stackoverflow")
         let request = URLRequest(url: url!)
         let session = URLSession.shared
         
-        session.dataTask(with: request, completionHandler: {
+        let task = session.dataTask(with: request, completionHandler: {
             (data, response, error) in
             if error != nil {
                 print(error!.localizedDescription)
             }
             else {
                 do {
-                    if let json = try JSONSerialization.jsonObject(with: data!) as? [String: Any] {
+                    if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any] {
                         self.jsonResponse = json
-                        for response in self.jsonResponse {
-                            //TODO: convert each response to an instance of a question
-                            self.questionData?.append(<#T##newElement: Question##Question#>)
+                        let items = self.jsonResponse?["items"] as! [[String: Any]]
+                        for aResponse in items {
+                            let title = aResponse["title"] as! String
+                            let isAnswered = aResponse["is_answered"] as! Bool?
+                            let tags = aResponse["tags"] as! [String]
+//                            guard let id = aResponse["id"] as! Int? else {
+//                                print("error unwrapping id - missed question")
+//                                continue
+//                            }
+//                            let date = aResponse["last_edit_date"] as! Date
+                                ///TODO: get date
+                          
+                            let question = Question(title: title, isAnswered: isAnswered, tags: tags)
+                            self.questionData?.append(question)
                         }
                     }
                 } catch {
                     print("error in JSONSerialization")
                 }
             }
-        }).resume()
+        })
+        task.resume()
     }
 }
 

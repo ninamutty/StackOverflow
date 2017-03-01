@@ -13,14 +13,14 @@ class Question {
     var title: String
     var isAnswered: Bool?
     var tags: [String]
-    var id: Int
-    var date: Date
+//    var id: Int?
+//    var date: Date
     
-    init(title: String, isAnswered: Bool?, tags: [String], id: Int, date: Date) {
+    init(title: String, isAnswered: Bool?, tags: [String]) {
         self.title = title
         self.isAnswered = isAnswered
         self.tags = tags
-        self.id = id
-        self.date = date
+//        self.id = id
+//        self.date = date
     }
 }

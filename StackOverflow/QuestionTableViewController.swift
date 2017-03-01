@@ -18,8 +18,9 @@ class QuestionTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidLoad()
-        print("View will appear")
+        //TODO: this data is coming back as nil (likely bc of async stuff - check out why this is happening)
         apiLayer.fetchQuestions()
+//        print("hola")
     }
     
     override func viewDidLoad() {
