@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StackOverflow/QuestionTableViewController.swift"
-            timestampString = "510031760.435495"
+            timestampString = "510128914.144464"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,12 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StackOverflow/QuestionTableViewController.swift"
-            timestampString = "510044128.267136"
+            timestampString = "510128914.144464"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "viewWillAppear(_:)"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "setQuestionList(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

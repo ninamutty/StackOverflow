@@ -30,13 +30,14 @@ internal class APILayer {
                             let title = aResponse["title"] as! String
                             let isAnswered = aResponse["is_answered"] as! Bool?
                             let tags = aResponse["tags"] as! [String]
+                            let answerCount = aResponse["answer_count"] as! Int
 //                            guard let id = aResponse["id"] as! Int? else {
 //                                print("error unwrapping id - missed question")
 //                                continue
 //                            }
 //                            let date = aResponse["last_edit_date"] as! Date
                                 ///TODO: get date
-                            let question = Question(title: title, isAnswered: isAnswered, tags: tags)
+                            let question = Question(title: title, isAnswered: isAnswered, tags: tags, answerCount: answerCount)
                             questionData.append(question)
                         }
                     }
@@ -44,7 +45,6 @@ internal class APILayer {
                     print("error in JSONSerialization")
                 }
             }
-//            print(questionData.count)
             completion(questionData)
         })
     

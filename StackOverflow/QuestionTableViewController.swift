@@ -17,7 +17,6 @@ class QuestionTableViewController: UITableViewController {
     internal func setQuestionList(_ questions: [Question]) {
         self.questionList = questions
         self.tableView.reloadData()
-        print("reload")
     }
     
     override func viewDidLoad() {
@@ -40,19 +39,43 @@ class QuestionTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        print(self.questionList.count)
         return self.questionList.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionTableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionTableViewCell", for: indexPath) as! QuestionTableViewCell
         
-        print("cell stuff")
         let row = indexPath.row
-        cell.textLabel?.text = self.questionList[row].title
+        cell.questionTitle.text = self.questionList[row].title
+//        cell.questionTitle.font = UIFont(name: "AppleSDGothicNeo", size: 8.0)
+//        cell.questionTitle = UIFontTextStyle.headline
+        
+        if self.questionList[row].isAnswered == true {
+            let count = self.questionList[row].answerCount
+            let singular = "\(count) Answer"
+            let plural = "\(count) Answers"
+            if count > 1 {
+                cell.isAnswered.text = plural
+            } else {
+                cell.isAnswered.text = singular
+            }
+        } else {
+            cell.isAnswered.text = "Not Answered"
+        }
+        
+        cell.tags.text = ""
+        let tags = self.questionList[row].tags
+        for tag in tags {
+            if tag != tags[tags.endIndex - 1] {
+                cell.tags.text = cell.tags.text! + "\(tag), "
+            } else {
+                cell.tags.text = cell.tags.text! + "\(tag)"
+            }
+        }
         
         return cell
+        
     }
  
 
