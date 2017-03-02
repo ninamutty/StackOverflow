@@ -1,30 +1,29 @@
-//
-//  QuestionTableViewController.swift
-//  StackOverflow
-//
-//  Created by Nina Mutty on 2/26/17.
-//  Copyright © 2017 Personal. All rights reserved.
-//
-
 import UIKit
-
-//typealias ServiceResponse = (NSError?) -> Void
 
 class QuestionTableViewController: UITableViewController {
     
     //MARK: Properties
-    var questions = [Question]()
     let apiLayer = APILayer()
-    
+    var cellText: String? = nil
+    var questionList = [Question]()
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidLoad()
-        //TODO: this data is coming back as nil (likely bc of async stuff - check out why this is happening)
-        apiLayer.fetchQuestions()
-//        print("hola")
+        apiLayer.fetchQuestions(completion: { questions in
+            self.setQuestionList(questions)
+        })
+    }
+    
+    internal func setQuestionList(_ questions: [Question]) {
+        self.questionList = questions
+        self.tableView.reloadData()
+        print("reload")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,25 +35,26 @@ class QuestionTableViewController: UITableViewController {
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        print(self.questionList.count)
+        return self.questionList.count
     }
-
 
     
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionTableViewCell", for: indexPath)
+        
+        print("cell stuff")
+        let row = indexPath.row
+        cell.textLabel?.text = self.questionList[row].title
+        
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.
