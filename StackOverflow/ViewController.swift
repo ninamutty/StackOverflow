@@ -1,14 +1,9 @@
-//
-//  ViewController.swift
-//  StackOverflow
-//
-//  Created by Nina Mutty on 2/26/17.
-//  Copyright © 2017 Personal. All rights reserved.
-//
 
 import UIKit
 
 class ViewController: UIViewController {
+    var question: Question? = nil
+    var answerList = [Answer]()
 
     override func viewDidLoad() {
         super.viewDidLoad()

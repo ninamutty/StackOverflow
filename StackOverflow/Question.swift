@@ -1,12 +1,4 @@
-//
-//  Question.swift
-//  StackOverflow
-//
-//  Created by Nina Mutty on 2/26/17.
-//  Copyright © 2017 Personal. All rights reserved.
-//
-
-import UIKit
+//import UIKit
 
 class Question {
     //MARK: Propterties
@@ -14,15 +6,15 @@ class Question {
     var isAnswered: Bool?
     var tags: [String]
     var answerCount: Int
-//    var id: Int?
+    var questionID: Int
 //    var date: Date
     
-    init(title: String, isAnswered: Bool?, tags: [String], answerCount: Int) {
+    init(title: String, isAnswered: Bool?, tags: [String], answerCount: Int, questionID: Int) {
         self.title = title
         self.isAnswered = isAnswered
         self.tags = tags
         self.answerCount = answerCount
-//        self.id = id
+        self.questionID = questionID
 //        self.date = date
     }
 }

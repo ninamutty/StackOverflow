@@ -9,14 +9,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "StackOverflow/Question.swift"
-            timestampString = "509837077.033108"
+            filePath = "StackOverflow/ViewController.swift"
+            timestampString = "510209929.308407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
-            landmarkName = "Question"
-            landmarkType = "3">
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,28 +26,76 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StackOverflow/QuestionTableViewController.swift"
-            timestampString = "510128914.144464"
+            timestampString = "510209764.992807"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StackOverflow/QuestionTableViewController.swift"
-            timestampString = "510128914.144464"
+            timestampString = "510209764.992807"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "setQuestionList(_:)"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StackOverflow.QuestionTableViewController.tableView (__ObjC.UITableView, didSelectRowAt : Foundation.IndexPath) -&gt; ()"
+                  moduleName = "StackOverflow"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ninamutty/Swift/StackOverflow/StackOverflow/QuestionTableViewController.swift"
+                  timestampString = "510207639.940833"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "437">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StackOverflow.QuestionTableViewController.(tableView (__ObjC.UITableView, didSelectRowAt : Foundation.IndexPath) -&gt; ()).(closure #1)"
+                  moduleName = "StackOverflow"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ninamutty/Swift/StackOverflow/StackOverflow/QuestionTableViewController.swift"
+                  timestampString = "510207639.942303"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StackOverflow/APILayer.swift"
+            timestampString = "510209764.992807"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "fetchOneQuestion(question:questionID:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

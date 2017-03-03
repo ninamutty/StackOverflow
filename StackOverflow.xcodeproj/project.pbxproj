@@ -17,6 +17,7 @@
 		941ADAF81E637AE300183567 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941ADAF71E637AE300183567 /* QuestionTableViewController.swift */; };
 		941ADAFA1E637E8300183567 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941ADAF91E637E8300183567 /* Question.swift */; };
 		941ADAFC1E666DD500183567 /* APILayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941ADAFB1E666DD500183567 /* APILayer.swift */; };
+		941ADB5E1E691D1C00183567 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941ADB5D1E691D1C00183567 /* Answer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		941ADAF71E637AE300183567 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		941ADAF91E637E8300183567 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		941ADAFB1E666DD500183567 /* APILayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APILayer.swift; sourceTree = "<group>"; };
+		941ADB5D1E691D1C00183567 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				941ADAF71E637AE300183567 /* QuestionTableViewController.swift */,
 				941ADAFB1E666DD500183567 /* APILayer.swift */,
 				941ADAF91E637E8300183567 /* Question.swift */,
+				941ADB5D1E691D1C00183567 /* Answer.swift */,
 				941ADAD91E6375FF00183567 /* Main.storyboard */,
 				941ADADC1E6375FF00183567 /* Assets.xcassets */,
 				941ADADE1E6375FF00183567 /* LaunchScreen.storyboard */,
@@ -216,6 +219,7 @@
 				941ADAFC1E666DD500183567 /* APILayer.swift in Sources */,
 				941ADAFA1E637E8300183567 /* Question.swift in Sources */,
 				941ADAF61E63773C00183567 /* QuestionTableViewCell.swift in Sources */,
+				941ADB5E1E691D1C00183567 /* Answer.swift in Sources */,
 				941ADAF81E637AE300183567 /* QuestionTableViewController.swift in Sources */,
 				941ADAD81E6375FF00183567 /* ViewController.swift in Sources */,
 				941ADAD61E6375FF00183567 /* AppDelegate.swift in Sources */,
